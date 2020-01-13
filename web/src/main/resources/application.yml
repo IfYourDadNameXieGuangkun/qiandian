@@ -1,0 +1,17 @@
+#公共配置文件
+spring:
+  profiles:
+    active: @spring.profiles.active@
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+    cache: false
+  messages:
+    basename: i18n.login
+
+
+
+
