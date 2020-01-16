@@ -1,5 +1,5 @@
 <configuration>
-	<property name="LOG_HOME" value="/app/log"/>
+	<property name="LOG_HOME" value="D:/app/log"/>
 	<property name="appName" value="spring-boot-logback"/>
 	<property name="log.level" value="info"/>
 	<appender name="logfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -7,6 +7,7 @@
 		<springProfile name="!local">
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<FileNamePattern>${LOG_HOME}/${appName}-%d{yyyy-MM-dd}.log</FileNamePattern>
+			<MaxHistory>100</MaxHistory>
 		</rollingPolicy>
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%-5level][%-40logger{40}:%-5L] %msg%n</pattern>

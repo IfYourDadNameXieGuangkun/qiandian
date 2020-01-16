@@ -19,10 +19,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+        <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
         <!--布局功能支持 同时支持thymeleaf3主程序 layout2.0以上版本  -->
         <!--布局功能支持 同时支持thymeleaf2主程序 layout1.0以上版本  -->
-        <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
+        <thymeleaf-layout-dialect.version>2.1.1</thymeleaf-layout-dialect.version>
+        <webjars-version>4.0.0</webjars-version>
+        <webjars-jquery-version>3.3.1</webjars-jquery-version>
+        <pagehelper-version>1.2.3</pagehelper-version>
+        <druid-version>1.1.13</druid-version>
     </properties>
 
     <modules>
@@ -39,6 +43,7 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -49,6 +54,30 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>${webjars-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>${webjars-jquery-version}</version>
+        </dependency>
+
+        <!-- 分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>${pagehelper-version}</version>
+        </dependency>
+        <!-- alibaba的druid数据库连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid-version}</version>
         </dependency>
     </dependencies>
 
@@ -71,6 +100,8 @@
                 <skipTests>true</skipTests>    <!--默认关掉单元测试 -->
             </configuration>
         </plugin>
+
+
     </plugins>
     </build>
 
