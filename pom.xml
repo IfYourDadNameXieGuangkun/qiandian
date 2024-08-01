@@ -23,7 +23,7 @@
         <!--布局功能支持 同时支持thymeleaf3主程序 layout2.0以上版本  -->
         <!--布局功能支持 同时支持thymeleaf2主程序 layout1.0以上版本  -->
         <thymeleaf-layout-dialect.version>2.1.1</thymeleaf-layout-dialect.version>
-        <webjars-version>4.0.0</webjars-version>
+        <webjars-version>4.3.1</webjars-version>
         <webjars-jquery-version>3.3.1</webjars-jquery-version>
         <pagehelper-version>1.2.3</pagehelper-version>
         <druid-version>1.1.13</druid-version>
